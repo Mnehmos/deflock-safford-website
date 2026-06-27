@@ -6,13 +6,13 @@ const base = import.meta.env.BASE_URL;
 <Layout title="Mass Surveillance Came to Graham County">
   <section class="hero">
     <p class="tagline">Graham County &middot; Arizona &middot; 2026</p>
-    <h1>Mass Surveillance Came to Safford</h1>
+    <h1>Get Flock Out of Safford</h1>
     <p class="subtitle">
-      Cameras on our roads log every car that passes. Five Arizona towns have already removed or blocked them. We think Safford should be the sixth. Here's what they really do, and how to get them out.
+      Cameras on our roads log every car that passes and feed a national network thousands of agencies can search. Five Arizona towns have already removed or blocked them. Safford can be the sixth.
     </p>
     <div style="margin-top: 2rem;">
-      <a href={`${base}cameras/`} class="btn">What It Really Does</a>
-      <a href={`${base}petition/`} class="btn btn-outline">Take Action</a>
+      <a href={`${base}proof/`} class="btn">It's Already Been Beaten</a>
+      <a href={`${base}act/`} class="btn btn-outline">Take Action</a>
     </div>
   </section>
 
@@ -36,78 +36,74 @@ const base = import.meta.env.BASE_URL;
       </div>
     </div>
 
-    <h2>The Short Version</h2>
-    <p>
-      Flock Safety cameras went up around Safford. Local law enforcement calls them an investigative tool that only reads license plates, with safeguards, audits, and nothing to worry about. Watch the interview yourself &mdash; we link it on the <a href={`${base}safford/`}>Local</a> page.
-    </p>
-    <p>
-      <strong>What we want is simple: the cameras come out.</strong> That isn't a fantasy. Five Arizona communities have already removed or blocked Flock &mdash; Sedona, Flagstaff, South Tucson, Cochise County, and Sierra Vista. Small towns, same state, same network. Safford can be next.
-    </p>
-    <p>
-      Until then, the floor is transparency. We have a legal right to see who has been searching the cameras in our county, and that audit is the evidence that wins the bigger fight. The problem was never whether Graham County officers are good people. The problem is the network: every plate those cameras read feeds a national system thousands of agencies can search, and that system has already been misused across Arizona for exactly the things people were told it wouldn't be.
+    <p style="font-size: 1.15rem;">
+      Flock Safety cameras went up around Safford. Local law enforcement calls them an investigative tool that only reads license plates, with safeguards and nothing to worry about. <strong>What we want is simple: the cameras come out.</strong> Until then, the floor is transparency, because we have a legal right to see who has been searching the cameras in our county, and that audit is the evidence that wins the bigger fight. The problem was never whether Graham County officers are good people. The problem is the network.
     </p>
 
-    <h2>Three Things To Know</h2>
+    <h2 id="what-it-is">It's Not Just a Plate Reader</h2>
+    <p>
+      Local officials describe Flock as a camera that reads license plates, "just letters and numbers, no personal information." That is not what the company sells. Flock's own marketing names the feature <strong>Vehicle Fingerprint</strong>: AI that profiles each vehicle far past the plate, cataloguing make, body type, color, damage, aftermarket wheels, roof racks, and bumper stickers, built to track a specific vehicle <strong>even when the plate isn't visible</strong>.
+    </p>
+    <p>
+      It searches for people too. Law enforcement can query footage with plain-language descriptions, the ACLU documented searches like a person in a <strong>"camo hat, forest green sweater."</strong> The "we don't use facial recognition" line misses the point: you don't need a face when the system can be searched for a hat, a tattoo, or what someone's shirt says.
+    </p>
+    <p>
+      Flock's flagship platform, <strong>Nova</strong>, fuses camera data with jail records, dispatch logs, public records, and open-source intelligence into a searchable file on a person, with no warrant required. The Electronic Frontier Foundation called it a <strong>"dystopian panopticon."</strong>
+    </p>
+    <p class="source">
+      Sources: Flock Safety product pages; BGR (June 2026); Berkeleyside (Nov 2025); ACLU, "Flock's Aggressive Expansions" (Aug 2025); EFF (2025).
+    </p>
 
-    <a href={`${base}cameras/`} class="card">
-      <span class="card-tag" style="background: rgba(230, 57, 70, 0.2); color: #E63946;">Learn &middot; 01</span>
-      <h3>It's Not Just a Plate Reader</h3>
-      <p>Flock's own product is called "Vehicle Fingerprint." It logs your make, color, dents, roof rack, and bumper stickers, then lets police search for people by description. It connects to doorbell cameras and predictive-policing platforms.</p>
+    <h2 id="abuse">The Network Has Already Been Abused</h2>
+    <p>
+      The strongest defense officials give is "nothing has been abused here in our valley." That specific claim may be true locally. Everywhere else on the same network, it fell apart, and these are Arizona agencies, the same product Graham County uses.
+    </p>
+    <div class="card">
       <ul class="card-specifics">
-        <li>Tracks your car even with <strong>no visible plate</strong></li>
-        <li>AI search for <strong>"man in a camo hat"</strong>, no face needed</li>
-        <li>Partnered with <strong>Ring</strong> doorbells in 2025, until public backlash killed the deal in Feb 2026</li>
+        <li><strong>Scottsdale PD ran more than 12,000 searches</strong> on the shared Arizona database, nearly one in four of all Flock searches statewide</li>
+        <li>A <strong>Glendale officer typed an ethnic slur</strong> into the search box as the stated reason for a query, the "reason" field recorded the bias instead of preventing it</li>
+        <li><strong>Tempe PD</strong> ran three searches for "ATL No Kings Protest" across <strong>425 networks</strong>, looking for any red vehicle in a time window ("ATL" is police code for "attempt to locate")</li>
+        <li><strong>Arizona DPS</strong> logged protest-related searches in June 2025</li>
       </ul>
-    </a>
-
-    <a href={`${base}network/`} class="card">
-      <span class="card-tag" style="background: rgba(244, 162, 97, 0.2); color: #F4A261;">Learn &middot; 02</span>
-      <h3>The Network Has Already Been Abused</h3>
-      <p>This isn't hypothetical and it isn't far away. On the same network Graham County feeds, agencies across Arizona and the country have run searches that had nothing to do with stolen cars.</p>
-      <ul class="card-specifics">
-        <li><strong>Sedona, Flagstaff, South Tucson</strong> removed their cameras; <strong>Cochise County</strong> blocked them</li>
-        <li>A <strong>Glendale officer</strong> typed an ethnic slur as a search reason</li>
-        <li>Arizona agencies ran <strong>No Kings protest</strong> searches, Tempe looked for "any red vehicle"</li>
-      </ul>
-    </a>
-
-    <a href={`${base}architecture/`} class="card">
-      <span class="card-tag" style="background: rgba(157, 78, 221, 0.2); color: #9D4EDD;">Learn &middot; 03</span>
-      <h3>The Camera Is the Front Door</h3>
-      <p>Flock's data platform can plug into Palantir, the company that builds ICE's deportation system and the Pentagon's AI targeting system. The same architecture that tracks a stolen car can track a person, a protester, a deportation target.</p>
-      <ul class="card-specifics">
-        <li>Palantir runs <strong>ImmigrationOS</strong> and the Pentagon's <strong>Maven</strong> targeting system</li>
-        <li>Tested on <strong>immigrants and Palestinians</strong> first</li>
-        <li>A federal directive now lists <strong>"anti-capitalist" and "anti-fascist"</strong> as extremism markers</li>
-      </ul>
-    </a>
-
-    <div class="cta-banner">
-      <h3>You Can Actually Do Something</h3>
-      <p>
-        Arizona public records law (A.R.S. &sect; 39-121) gives you the right to see who has been searching the cameras in your community. We wrote the request for you. Copy, paste, send.
-      </p>
-      <a href={`${base}records/`} class="btn">Get the Records Request</a>
+      <p class="source">Sources: Tucson Spotlight (Feb 2026); EFF (Nov 2025); 404 Media; The Record.</p>
     </div>
+    <p>
+      Nationwide, the EFF obtained 12 million searches from 3,900+ agencies. More than 50 agencies ran searches tied to 2025 protests. <strong>Dayton, Ohio</strong> bagged all 72 of its cameras after finding 7,000+ immigration-related searches by outside agencies. A <strong>Texas officer</strong> used the network to hunt a woman who had a self-administered abortion. <strong>Border Patrol</strong> had back-door access to at least ten Washington departments that never authorized it.
+    </p>
+    <p class="source">Sources: Fortune (June 2026); SF Standard (Sept 2025); EFF; UW Center for Human Rights (Nov 2025).</p>
+    <p>
+      Officials say a monthly audit keeps the system clean. Turn that around: <strong>the audit log is exactly how every one of these abuses got caught.</strong> The thing they call proof of safety is the thing that documents the danger. So let's see ours.
+    </p>
+
+    <h2 id="architecture">The Camera Is the Front Door</h2>
+    <p>
+      Flock's Nova platform can integrate with predictive-policing systems, <strong>including Palantir</strong>, the company founded in 2003 with CIA venture funding and chaired by billionaire Peter Thiel, a major backer of the current administration. Palantir builds the data backbone for two operations that turn out to be the same machine.
+    </p>
+    <div class="card">
+      <span class="card-tag" style="background: rgba(157, 78, 221, 0.2); color: #9D4EDD;">Deportation</span>
+      <h3>ImmigrationOS</h3>
+      <p>Palantir's ICE platform fuses license plates, Medicaid records, and travel data into "near real-time visibility" of people's movements, assigning a "confidence score" and a map pin for arrest. ICE-Palantir contracts total <strong>$435M+ since 2011</strong>, and the tools raised ICE's target-location rate from ~27% to nearly <strong>80%</strong>.</p>
+      <p class="source">Sources: ACLU (Apr 2026); Fortune (Jan 2026); American Immigration Council; AFSC Investigate.</p>
+    </div>
+    <div class="card">
+      <span class="card-tag" style="background: rgba(157, 78, 221, 0.2); color: #9D4EDD;">Targeting</span>
+      <h3>Project Maven &amp; Palestine</h3>
+      <p>The same company runs Maven, the Pentagon's AI targeting system that automates the "kill chain," a contract grown from $480 million into the billions, used to help pick targets in the US strikes on Iran. The UN's own June 2025 report ("Economy of Genocide") named Palantir specifically for providing AI battlefield software to the Israeli military. Tested on immigrants and Palestinians first.</p>
+      <p class="source">Sources: OHCHR / UN report A/HRC/59/23 (June 2025); Liberation News; AFSC Investigate.</p>
+    </div>
+    <p>
+      In September 2025 the administration signed <strong>NSPM-7</strong>, branding "anti-fascism" as terrorism cover and listing <strong>"anti-capitalism"</strong> as an extremism indicator. Not actions, beliefs. Put the surveillance network next to the enemies list: a government that writes "anti-capitalist" into a terror directive, and a camera network that already logged who drove to a protest. The machine is built and it has already been aimed.
+    </p>
+    <p class="source">Sources: White House (Sept 25, 2025); Brennan Center; ACLU; TIME.</p>
 
     <div class="cta-banner">
       <h3>This Has Already Been Won, Five Times</h3>
-      <p>
-        Sedona, Flagstaff, South Tucson, Cochise County, and Sierra Vista all canceled or blocked Flock. Same state, same network, same company. See exactly how they did it, and how Safford can be next.
-      </p>
-      <a href={`${base}wins/`} class="btn">How Other AZ Towns Won</a>
+      <p>Sedona, Flagstaff, South Tucson, Cochise County, and Sierra Vista all canceled or blocked Flock. Same state, same network. See how, and how Safford can be next.</p>
+      <a href={`${base}proof/`} class="btn">It's Already Been Beaten</a>
     </div>
 
-    <h2>Who's Behind This</h2>
-    <p>
-      DeFlock Safford is a project of The Mnemosyne Research Institute, a local research operation in Graham County. We're not anti-police. We're against a private surveillance network with no warrant requirement, sold to our town, that we don't control and can't see into.
-    </p>
-    <p>
-      Every number on this site links to a primary document or major news report. If we got something wrong, we want to know. That's the whole point.
-    </p>
-    <p style="margin-top: 1.5rem; color: var(--color-muted);">
-      &mdash; The Mnemosyne Research Institute<br />
-      Safford, Arizona
+    <p style="margin-top: 2rem; color: var(--color-muted); font-size: 0.95rem;">
+      DeFlock Safford is a project of The Mnemosyne Research Institute, a local research operation in Graham County. We're not anti-police. We're against a private surveillance network with no warrant requirement, sold to our town, that we don't control. Every claim here links to a primary document or major report. If we got something wrong, we want to know.
     </p>
   </div>
 </Layout>

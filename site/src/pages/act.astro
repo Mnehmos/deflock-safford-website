@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+
+const ACTION_NETWORK_URL = "https://actionnetwork.org/petitions/audit-and-account-for-flock-surveillance-in-graham-county";
+
+const requestText = `To the Records Custodian:
+
+Under the Arizona Public Records Law (A.R.S. Section 39-121 et seq.),
+I request to inspect and obtain copies of the following records
+regarding your agency's use of Flock Safety automated license plate
+reader (ALPR) cameras, for the period of the last 12 months:
+
+1. The Flock "Network Audit" report(s) showing all searches of your
+   agency's camera data conducted by external or outside agencies,
+   including the searching agency, date, and the stated reason or
+   case number for each search.
+
+2. The Flock "Organization Audit" report(s) showing all searches
+   conducted by your own personnel, including user, date, and the
+   stated reason or case number for each search.
+
+3. Your agency's current Flock data-sharing configuration, including
+   which agencies, states, or networks your data is shared with, and
+   whether federal sharing is enabled or disabled.
+
+4. Any policy, procedure, or memorandum of understanding governing
+   your agency's use of Flock or ALPR data.
+
+5. The total number of cameras operated, and the data retention
+   period currently configured.
+
+If any portion of these records is withheld, please cite the specific
+statutory basis for withholding and provide all reasonably segregable
+non-exempt portions.
+
+Please advise of any fees before fulfilling this request. I am willing
+to inspect records in person to minimize costs.
+
+Thank you.
+
+[Your name]
+[Your contact information]
+[Date]`;
+---
+
+<Layout title="Take Action">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(230, 57, 70, 0.2); color: #E63946;">Act</span>
+    <h1>Three Things You Can Do</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      Sign the petition. File the records request. Show up at the meeting. That's the exact path five Arizona towns walked to get Flock out. Do all three.
+    </p>
+
+    <h2 id="petition">1. Sign the Petition</h2>
+    <p>
+      <strong>We want the Flock cameras removed from Graham County</strong>, as Sedona, Flagstaff, South Tucson, Cochise County, and Sierra Vista have already done. If they stay, the floor is transparency: release the network audit, disable federal and out-of-state data sharing, hold a public hearing before any renewal, and adopt a written use policy with real penalties for misuse.
+    </p>
+    <p style="color: var(--color-muted); font-size: 0.95rem;">
+      We host this on <strong>Action Network</strong>, the platform built for grassroots organizing. No ad-tracking on signers. Your signature is between you, us, and the officials we deliver it to.
+    </p>
+    <!-- Action Network embedded petition form -->
+    <!-- is:inline is REQUIRED: the AN bootstrap relies on document.currentScript,
+         which Astro's default script bundling would break. Do not remove. -->
+    <link href="https://actionnetwork.org/css/style-embed-v3.css" rel="stylesheet" type="text/css" />
+    <script is:inline src="https://actionnetwork.org/widgets/v6/petition/audit-and-account-for-flock-surveillance-in-graham-county?format=js&source=widget"></script>
+    <div id="can-petition-area-audit-and-account-for-flock-surveillance-in-graham-county" style="width: 100%"></div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-muted);">
+      Form not loading? You can also <a href={ACTION_NETWORK_URL} target="_blank" rel="noopener">sign directly on Action Network &rarr;</a>
+    </p>
+
+    <h2 id="records">2. File a Records Request</h2>
+    <p>
+      Arizona's public records law (A.R.S. &sect; 39-121) gives any person the right to inspect public records. Flock search logs are public records. No lawyer, no reason needed. The most useful document is the <strong>Network Audit</strong>, the log of every outside agency that searched our cameras' data, the same report that exposed abuse in Dayton, Bend, and San Francisco. File it with both custodians:
+    </p>
+    <div class="card">
+      <h3>City of Safford &mdash; for Safford PD cameras</h3>
+      <ul class="card-specifics">
+        <li><strong>City Clerk's Office</strong> (records custodian), 717 W. Main St., Safford AZ 85546 &middot; Mailing: P.O. Box 272, Safford AZ 85548</li>
+        <li><strong>Clerk phone:</strong> 928-432-4000 &middot; Safford PD records: 928-432-4100</li>
+        <li>Records info: <strong>cityofsafford.us</strong> (Records section)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Graham County &mdash; for Sheriff's Office cameras</h3>
+      <ul class="card-specifics">
+        <li><strong>Graham County Sheriff's Office</strong>, 921 W. Thatcher Blvd., Safford AZ 85546</li>
+        <li><strong>Phone:</strong> 928-428-3141 &middot; Sheriff P.J. Allred</li>
+        <li>Records Division: <strong>graham.az.gov/247/Records</strong></li>
+      </ul>
+    </div>
+    <p style="font-size: 0.9rem; color: var(--color-muted);">
+      Neither office publishes a records-request email, so file by mail or in person, or call the clerk's line to ask where to send it. We don't list an email we can't confirm.
+    </p>
+    <p>Copy this, fill in the three bracketed lines, and send it:</p>
+    <div class="codeblock" id="request">{requestText}</div>
+    <button class="btn" id="copy-btn" type="button">Copy the Request</button>
+
+    <h2 id="meetings">3. Show Up at the Meeting</h2>
+    <p>
+      A signature is a number. A neighbor at the podium is a problem the council has to answer. These two bodies hold the Flock contracts, their meetings are public, and you have the right to speak.
+    </p>
+    <div class="card">
+      <h3>Safford City Council</h3>
+      <ul class="card-specifics">
+        <li><strong>When:</strong> usually 2nd &amp; 4th Monday, 6:00 PM (holiday bumps to Tuesday; some months vary, check the agenda)</li>
+        <li><strong>Where:</strong> Safford Library Program Room, 808 S. 7th Ave.</li>
+        <li>Agendas: cityofsafford.us &rarr; Agenda Center &middot; "Citizen Comments on Non-Agenda Items" is your slot</li>
+      </ul>
+      <a href={`${base}safford-city-council.ics`} class="btn" style="margin-top: 0.5rem;" download>Add to Calendar</a>
+    </div>
+    <div class="card">
+      <h3>Graham County Board of Supervisors</h3>
+      <ul class="card-specifics">
+        <li><strong>When:</strong> 1st &amp; 3rd Monday (holiday bumps to Tuesday)</li>
+        <li><strong>Where:</strong> Graham County General Services Building, Assembly Room, 921 W. Thatcher Blvd.</li>
+        <li>Agendas: graham.az.gov &rarr; Meetings and Agendas &middot; Questions: 928-428-3250</li>
+      </ul>
+      <a href={`${base}graham-county-supervisors.ics`} class="btn" style="margin-top: 0.5rem;" download>Add to Calendar</a>
+    </div>
+    <p style="font-size: 0.9rem; color: var(--color-muted);">
+      Always confirm the date on the official agenda before you go, schedules shift around holidays and budget season.
+    </p>
+
+    <h3>A Two-Minute Script You Can Read</h3>
+    <blockquote>
+      My name is ___ and I live in ___. The Flock cameras on our roads feed a national network thousands of outside agencies can search. On that same network, one Phoenix-area department ran over twelve thousand searches, an officer logged an ethnic slur as a reason, and Arizona agencies used it to track people at protests. I'm not asking our police to stop solving crimes. I'm asking this body to request our network audit and hold a public hearing before the Flock contract is renewed. Show us who is watching. Thank you.
+    </blockquote>
+
+    <h2>How to Make It Land</h2>
+    <div class="card">
+      <ul class="card-specifics">
+        <li><strong>Bring receipts, not vibes.</strong> Name the Scottsdale searches, the Glendale slur, the Tempe protest searches. Real Arizona facts beat "I heard."</li>
+        <li><strong>Keep it to one ask.</strong> Request the audit and a hearing before renewal. One clear request lands harder than five.</li>
+        <li><strong>Don't go alone.</strong> Three neighbors at the same meeting is a pattern the council notices. One is an anecdote.</li>
+        <li><strong>Back the police and still say no.</strong> Flagstaff did exactly that. "No reflection on the department" disarms the room.</li>
+      </ul>
+    </div>
+
+    <h2>More Tools</h2>
+    <p>
+      You're not alone in this. The national movement has maps, model bills, and organizers:
+      <a href="https://deflock.me" target="_blank" rel="noopener">deflock.me</a> (camera map),
+      the <a href="https://www.aclu.org/get-the-flock-out-toolkit" target="_blank" rel="noopener">ACLU "Get the Flock Out" toolkit</a> (model bills, organizer directory), and
+      <a href="https://deflocktucson.com" target="_blank" rel="noopener">DeFlock Tucson</a>, the Arizona chapter that helped push South Tucson to cancel.
+    </p>
+  </div>
+
+  <script is:inline>
+    document.getElementById('copy-btn')?.addEventListener('click', () => {
+      const text = document.getElementById('request')?.innerText || '';
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        if (btn) { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = 'Copy the Request'; }, 2000); }
+      });
+    });
+  </script>
+</Layout>
