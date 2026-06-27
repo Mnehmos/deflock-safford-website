@@ -34,8 +34,10 @@ const ACTION_NETWORK_URL = "https://actionnetwork.org/petitions/audit-and-accoun
     </p>
 
     <!-- Action Network embedded petition form -->
+    <!-- is:inline is REQUIRED: the AN bootstrap relies on document.currentScript,
+         which Astro's default script bundling would break. Do not remove. -->
     <link href="https://actionnetwork.org/css/style-embed-v3.css" rel="stylesheet" type="text/css" />
-    <script src="https://actionnetwork.org/widgets/v6/petition/audit-and-account-for-flock-surveillance-in-graham-county?format=js&source=widget"></script>
+    <script is:inline src="https://actionnetwork.org/widgets/v6/petition/audit-and-account-for-flock-surveillance-in-graham-county?format=js&source=widget"></script>
     <div id="can-petition-area-audit-and-account-for-flock-surveillance-in-graham-county" style="width: 100%"></div>
 
     <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-muted);">
