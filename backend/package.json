@@ -1,0 +1,16 @@
+{
+  "name": "deflock-safford-petition-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Minimal, privacy-first petition signature API for DeFlock Safford. Holds the Supabase service key server-side and inserts signatures. Never exposes the signer list.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0"
+  }
+}

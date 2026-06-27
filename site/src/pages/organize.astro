@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="How To Organize">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(42, 157, 143, 0.2); color: #2A9D8F;">Act</span>
+    <h1>How Towns Actually Pushed Flock Out</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      Five Arizona communities ended or blocked their Flock contracts in 2026. They didn't do it with a viral post. They did it with records, public comment, and showing up. Here's the playbook.
+    </p>
+
+    <h2>1. Get the Records First</h2>
+    <p>
+      Every successful campaign started with the audit logs. The <a href={`${base}records/`}>records request</a> is step one because it turns "I'm worried about surveillance" into "here is the document showing who searched our data." Officials can wave off a feeling. They can't wave off their own log.
+    </p>
+
+    <h2>2. Find Out Who Holds the Contract</h2>
+    <p>
+      Flock contracts are approved and renewed by elected bodies, a city council or a county board of supervisors. That's your leverage point. The contract has a renewal date. Find it. A contract that comes up for a vote is a contract that can be stopped.
+    </p>
+
+    <h2>3. Show Up to Public Comment</h2>
+    <p>
+      In South Tucson, Sedona, and Cochise County, the turning point was residents at the meeting. You usually get two to three minutes. Keep it concrete: name the network, name the abuse in other Arizona towns, ask one direct question. The South Tucson council voted 5-1-1 to cancel after residents spoke.
+    </p>
+    <div class="card">
+      <h3>A Two-Minute Comment Template</h3>
+      <ul class="card-specifics">
+        <li>"These cameras feed a national network, not just our police."</li>
+        <li>"On that same network, Scottsdale ran 12,000 searches and a Glendale officer logged a slur as a reason."</li>
+        <li>"Arizona agencies used it to track No Kings protesters."</li>
+        <li>"I'm asking the council to request our network audit and review this contract before it renews."</li>
+      </ul>
+    </div>
+
+    <h2>4. Bring Receipts, Not Vibes</h2>
+    <p>
+      The campaigns that failed sounded paranoid. The ones that won sounded prepared. Every claim on this site is sourced; cite the source when you speak. "The EFF obtained the records" beats "I heard they're spying on us" every time. Your credibility is the whole argument.
+    </p>
+
+    <h2>5. Don't Go Alone</h2>
+    <p>
+      One person is an anecdote. Three people at the same meeting is a pattern the council notices. Groups like DeFlock chapters, the ACLU of Arizona, and local mutual-aid networks have done this before and have materials ready. Pull a few neighbors in before you ever stand up to speak.
+    </p>
+
+    <h2>6. Know the Honest Counterargument</h2>
+    <p>
+      Officials will say the cameras recover stolen cars and find missing people. That's true, and pretending otherwise costs you the room. The answer isn't that the tool never works. It's that a tool with no warrant requirement, feeding a network we don't control, is too dangerous for the benefit, and other Arizona towns decided exactly that.
+    </p>
+
+    <div class="cta-banner">
+      <h3>Start With One Request</h3>
+      <p>You don't have to run the whole campaign today. You have to send one email.</p>
+      <a href={`${base}records/`} class="btn">Get the Records Request</a>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+
+// ── After you create the petition on Action Network, paste its URL here ──
+const ACTION_NETWORK_URL = "REPLACE_WITH_ACTION_NETWORK_URL";
+const isLive = !ACTION_NETWORK_URL.startsWith("REPLACE");
+---
+
+<Layout title="Sign the Petition">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(230, 57, 70, 0.2); color: #E63946;">Act</span>
+    <h1>Petition: Audit and Account for Flock in Graham County</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      We're not asking you to trust a feeling. We're asking the City of Safford and Graham County to put the facts on the record, in public, before the next contract renewal.
+    </p>
+
+    <h2>The Demand</h2>
+    <p>We, the undersigned residents and neighbors of Graham County, call on the City of Safford and the Graham County Board of Supervisors to:</p>
+    <div class="card">
+      <ul class="card-specifics">
+        <li><strong>Release the Flock network audit</strong> &mdash; the full log of every outside agency that has searched our cameras' data, with the stated reason for each search.</li>
+        <li><strong>Disable federal and out-of-state data sharing</strong> by default, so our local data is not silently fed into ICE or other federal systems.</li>
+        <li><strong>Hold a public hearing</strong> before any Flock contract is renewed, with the audit results presented to residents first.</li>
+        <li><strong>Adopt a written ALPR use policy</strong> with real penalties for misuse, modeled on the communities that have already done this.</li>
+      </ul>
+    </div>
+    <p>
+      None of this asks officers to stop solving crimes. It asks our government to show us who is watching, on a network that has already been misused across Arizona.
+    </p>
+
+    <h2>Add Your Name</h2>
+    <p style="color: var(--color-muted); font-size: 0.95rem;">
+      We host this petition on <strong>Action Network</strong>, the platform built for grassroots organizing. We chose it on purpose: it doesn't run ad-tracking on signers and it's the standard tool the labor and community movement trusts. Your signature is between you, us, and the officials we deliver it to.
+    </p>
+
+    {isLive ? (
+      <div class="cta-banner">
+        <h3>Sign the Petition</h3>
+        <p>Opens our petition on Action Network. Takes about thirty seconds.</p>
+        <a href={ACTION_NETWORK_URL} class="btn" target="_blank" rel="noopener">Sign on Action Network &rarr;</a>
+      </div>
+    ) : (
+      <div class="cta-banner">
+        <h3>Petition Going Live Soon</h3>
+        <p>We're finishing setup. Check back shortly, or file the records request now, that's the step that creates the paper trail either way.</p>
+        <a href={`${base}records/`} class="btn">File the Records Request</a>
+      </div>
+    )}
+
+    <h2>Signing Is Step One</h2>
+    <p>
+      The petition shows numbers. The records request creates the document. The organizing turns both into a contract that doesn't get renewed. Do all three.
+    </p>
+    <div style="margin-top: 1.5rem;">
+      <a href={`${base}records/`} class="btn btn-outline">Records Request</a>
+      <a href={`${base}organize/`} class="btn btn-outline">How To Organize</a>
+    </div>
+  </div>
+</Layout>

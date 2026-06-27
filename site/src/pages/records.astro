@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+
+const requestText = `To the Records Custodian:
+
+Under the Arizona Public Records Law (A.R.S. Section 39-121 et seq.),
+I request to inspect and obtain copies of the following records
+regarding your agency's use of Flock Safety automated license plate
+reader (ALPR) cameras, for the period of the last 12 months:
+
+1. The Flock "Network Audit" report(s) showing all searches of your
+   agency's camera data conducted by external or outside agencies,
+   including the searching agency, date, and the stated reason or
+   case number for each search.
+
+2. The Flock "Organization Audit" report(s) showing all searches
+   conducted by your own personnel, including user, date, and the
+   stated reason or case number for each search.
+
+3. Your agency's current Flock data-sharing configuration, including
+   which agencies, states, or networks your data is shared with, and
+   whether federal sharing is enabled or disabled.
+
+4. Any policy, procedure, or memorandum of understanding governing
+   your agency's use of Flock or ALPR data.
+
+5. The total number of cameras operated, and the data retention
+   period currently configured.
+
+If any portion of these records is withheld, please cite the specific
+statutory basis for withholding and provide all reasonably segregable
+non-exempt portions.
+
+Please advise of any fees before fulfilling this request. I am willing
+to inspect records in person to minimize costs.
+
+Thank you.
+
+[Your name]
+[Your contact information]
+[Date]`;
+---
+
+<Layout title="Records Request">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(42, 157, 143, 0.2); color: #2A9D8F;">Act</span>
+    <h1>See Who's Searching the Cameras</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      Arizona's public records law (A.R.S. &sect; 39-121) gives any person the right to inspect public records. Flock search logs are public records. You don't need a lawyer and you don't need a reason. Copy the request below and send it.
+    </p>
+
+    <h2>What To Ask For</h2>
+    <p>
+      The single most useful document is the <strong>Network Audit</strong>, the log of every outside agency that searched the local cameras' data. That's the report that exposed the abuse in Dayton, Bend, and San Francisco. Also ask for the <strong>Organization Audit</strong> (internal searches) and the current <strong>data-sharing settings</strong>.
+    </p>
+
+    <h2>Who To Send It To</h2>
+    <p>
+      File it with both custodians, because both run cameras on the network. Arizona law lets you inspect in person at no cost, so a phone call or a walk-in works as well as mail. Keep a copy and note the date.
+    </p>
+
+    <div class="card">
+      <h3>City of Safford &mdash; for Safford PD cameras</h3>
+      <ul class="card-specifics">
+        <li><strong>City Clerk's Office</strong> (records custodian), 717 W. Main St., Safford AZ 85546 &middot; Mailing: P.O. Box 272, Safford AZ 85548</li>
+        <li><strong>Clerk phone:</strong> 928-432-4000</li>
+        <li><strong>Safford Police Department:</strong> 525 10th Ave &middot; Records line 928-432-4100</li>
+        <li>Records info and fee schedule: <strong>cityofsafford.us</strong> (Records section)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Graham County &mdash; for Sheriff's Office cameras</h3>
+      <ul class="card-specifics">
+        <li><strong>Graham County Sheriff's Office</strong>, 921 W. Thatcher Blvd., Safford AZ 85546</li>
+        <li><strong>Phone:</strong> 928-428-3141 &middot; Sheriff P.J. Allred</li>
+        <li>Records Division page: <strong>graham.az.gov/247/Records</strong></li>
+      </ul>
+    </div>
+
+    <p style="font-size: 0.9rem; color: var(--color-muted);">
+      Note: neither office publishes a direct records-request email, so file in writing by mail or in person, or call the clerk's line first to ask where to send it. We don't list an email we can't confirm &mdash; that's the same standard we hold everyone else to.
+    </p>
+
+    <h2>The Request</h2>
+    <p>Copy this, fill in the three bracketed lines at the bottom, and send it.</p>
+    <div class="codeblock" id="request">{requestText}</div>
+    <button class="btn" id="copy-btn" type="button">Copy the Request</button>
+
+    <h2>What Happens Next</h2>
+    <p>
+      Arizona agencies must respond <strong>promptly</strong>. They can charge reasonable copying fees, which is why the request offers in-person inspection to keep it free. If they stall, deny, or over-redact, that itself is news, and grounds for follow-up. Either way, you've created a public record of having asked.
+    </p>
+
+    <h2>If You Get the Records</h2>
+    <p>
+      Look at the Network Audit first. Check whether any outside agency searched Graham County data, what reason they logged, and whether any federal agency appears. If you find something, or even if you find nothing, share it. Email it back to us through the <a href={`${base}about/`}>About</a> page, or bring it to a city or county meeting.
+    </p>
+
+    <div class="cta-banner">
+      <h3>One Request Isn't Enough</h3>
+      <p>The towns that pushed Flock out did it together. Here's how they organized.</p>
+      <a href={`${base}organize/`} class="btn">How To Organize</a>
+    </div>
+  </div>
+
+  <script is:inline>
+    document.getElementById('copy-btn')?.addEventListener('click', () => {
+      const text = document.getElementById('request')?.innerText || '';
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        if (btn) { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = 'Copy the Request'; }, 2000); }
+      });
+    });
+  </script>
+</Layout>

@@ -1,0 +1,26 @@
+# ── Secrets: NEVER commit these ──────────────────────────────
+# The Supabase service key and any live credential live only in
+# environment variables on the host (Railway), never in git.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# ── Node ─────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ── Astro build output ───────────────────────────────────────
+site/dist/
+site/.astro/
+
+# ── OS / editor cruft ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

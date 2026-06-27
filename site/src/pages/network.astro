@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="The Network and The Abuse">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(244, 162, 97, 0.2); color: #F4A261;">Learn &middot; 02</span>
+    <h1>The Network Has Already Been Abused</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      The strongest defense local officials give is "nothing has been abused here." Read carefully and you'll notice they always say "here in our valley." Everywhere else on the same network, it fell apart.
+    </p>
+
+    <h2>Arizona Communities That Pulled the Plug</h2>
+    <p>
+      These are not California cities. This is our state, the same Flock network, the same product Graham County uses.
+    </p>
+
+    <div class="card">
+      <h3>Removed or Blocked in Arizona</h3>
+      <ul class="card-specifics">
+        <li><strong>Sedona</strong> &mdash; cancelled its contract and removed cameras</li>
+        <li><strong>Flagstaff</strong> &mdash; shortened retention, then removed cameras</li>
+        <li><strong>South Tucson</strong> &mdash; city council voted 5-1-1 to cancel, citing ICE data-sharing fears</li>
+        <li><strong>Cochise County</strong> &mdash; blocked Flock cameras</li>
+        <li><strong>Sierra Vista</strong> &mdash; wound down its grant-funded cameras</li>
+      </ul>
+      <p class="source">Sources: KGUN9, Tucson Spotlight, KOLD, AZPM (Feb&ndash;May 2026).</p>
+    </div>
+
+    <h2>The Scottsdale Number</h2>
+    <p>
+      On the shared Arizona database, <strong>Scottsdale PD ran more than 12,000 searches</strong>, nearly one in four of all Flock searches in the entire state. A single department, a quarter of the searches statewide. That is what unrestricted access to a shared network looks like.
+    </p>
+    <p class="source">Source: Tucson Spotlight, "South Tucson ends Flock camera contract" (Feb 2026).</p>
+
+    <h2>The Glendale Slur</h2>
+    <p>
+      A <strong>Glendale officer typed an ethnic slur into the search box as the stated reason</strong> for a license-plate query. The "reason" field is the safeguard officials point to. Here it recorded the bias instead of preventing it.
+    </p>
+    <p class="source">Source: Tucson Spotlight (Feb 2026).</p>
+
+    <h2>Tracking Protesters, In Arizona</h2>
+    <p>
+      The Electronic Frontier Foundation obtained records of more than 12 million Flock searches. Among them, agencies ran searches tied to the 2025 <strong>"No Kings"</strong> protests against the administration. Arizona agencies were in the data:
+    </p>
+    <div class="card">
+      <ul class="card-specifics">
+        <li><strong>Tempe PD</strong> searched for "any red vehicle" near the protest, not a specific plate, just any red car in a time window</li>
+        <li><strong>Oro Valley PD</strong> ran No Kings protest searches</li>
+        <li><strong>Arizona DPS</strong> ran protest-related searches</li>
+      </ul>
+      <p class="source">Sources: EFF (Nov&ndash;Dec 2025); Techdirt; 404 Media; AZPM.</p>
+    </div>
+    <p>
+      Flock's rebuttal is that this was 19 agencies out of roughly 3,900, less than half a percent. That's true, and it's not the comfort they think it is. The architecture allowed it, the records prove it happened, and the camera doesn't know the difference between a stolen car and a protester.
+    </p>
+
+    <h2>Beyond Arizona</h2>
+    <div class="card">
+      <ul class="card-specifics">
+        <li><strong>Dayton, Ohio</strong> bagged all 72 of its cameras after finding 7,000+ immigration-related searches by outside agencies</li>
+        <li><strong>San Francisco's</strong> database was searched by out-of-state agencies 1.6 million times in seven months</li>
+        <li>A <strong>Texas officer</strong> used Flock's national network to hunt a woman who had a self-administered abortion</li>
+        <li><strong>Border Patrol</strong> had "back door" access to at least ten Washington police departments that never authorized it</li>
+      </ul>
+      <p class="source">Sources: Fortune (June 2026); SF Standard (Sept 2025); EFF; UW Center for Human Rights (Nov 2025).</p>
+    </div>
+
+    <h2>The Audit Trick</h2>
+    <p>
+      Officials say a monthly audit keeps the system clean. Turn that around: <strong>the audit log is exactly how every one of these abuses got caught.</strong> In Dayton, Bend, and San Francisco, the logs are what exposed the misuse. The thing they call proof of safety is the thing that documents the danger. So let's see ours.
+    </p>
+
+    <div class="cta-banner">
+      <h3>See Who's Been Searching Safford</h3>
+      <p>Arizona law gives you the right to request the network audit. We wrote it for you.</p>
+      <a href={`${base}records/`} class="btn">Get the Records Request</a>
+    </div>
+  </div>
+</Layout>

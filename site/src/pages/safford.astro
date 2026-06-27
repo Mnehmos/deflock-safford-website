@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Flock in Graham County">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(42, 157, 143, 0.2); color: #2A9D8F;">Local</span>
+    <h1>Flock in Graham County</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      Sheriff PJ Allred, Safford Police Chief, and a department captain went on the Courier's local program to reassure the community about the Flock cameras. We watched the whole thing. Here's a fair account, and where it doesn't hold.
+    </p>
+
+    <h2>What They Said, Accurately</h2>
+    <p>
+      Credit where due: a lot of the interview was honest and the mechanics were correct. The cameras keep data for 30 days. There's no facial recognition on their system. Searches are logged. They run a monthly internal audit. And they were candid about deputy pay and staffing. We're not going to twist any of that.
+    </p>
+    <p>
+      They were also careful, and this matters, to limit their "no abuse" claim to Graham County. "Here in our valley," they kept saying. As far as anyone has documented, <strong>that specific claim is true</strong>: no Flock abuse has been publicly tied to Safford PD or the Graham County Sheriff's Office. We are not accusing local officers of misusing it.
+    </p>
+
+    <h2>Where It Doesn't Hold</h2>
+
+    <div class="card">
+      <h3>"It only reads plates, no personal info"</h3>
+      <p>Flock's own product is Vehicle Fingerprint, logging make, color, damage, roof racks, and bumper stickers, plus AI search for people by description. The "letters and numbers" framing describes a narrower product than the one deployed.</p>
+    </div>
+
+    <div class="card">
+      <h3>"It's not luck, we have policies"</h3>
+      <p>Their accreditation audits the department's own policies. It does not audit Flock the vendor's data-sharing, which is exactly where the abuse happened elsewhere. In Oxnard and Mountain View, departments with good local policy still had their data siphoned through Flock's national lookup without their knowledge.</p>
+    </div>
+
+    <div class="card">
+      <h3>"You're on a public road, no privacy"</h3>
+      <p>One officer compared the cameras to himself reading plates from the roadside. But one person seeing one plate once is not the same as a national network logging every plate's location over time and making it searchable across thousands of agencies for years. Courts are beginning to recognize that aggregated, persistent tracking is different in kind from a single public observation.</p>
+    </div>
+
+    <div class="card">
+      <h3>"We control who sees our data"</h3>
+      <p>Flock added those controls in 2025 and 2026 precisely because the sharing had already happened without agencies' knowledge. It's a patch applied after the backdoor was exposed, and lawsuits allege the data "flowed anyway." Presented as a settled guarantee, it's actually a retrofit.</p>
+    </div>
+
+    <div class="card">
+      <h3>"The monthly audit keeps it clean"</h3>
+      <p>The audit log is how every documented abuse elsewhere got caught. It's a record of what happened, not a wall against it. That's not a reason to distrust local officers. It's the reason the public should request those logs.</p>
+    </div>
+
+    <h2>The Local Facts</h2>
+    <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
+      <div class="stat">
+        <div class="stat-number">30</div>
+        <div class="stat-label">Days Graham County retains the data</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">~4,000</div>
+        <div class="stat-label">Square miles the Sheriff's Office covers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1 of 4</div>
+        <div class="stat-label">Statewide Flock searches run by Scottsdale PD alone</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">AZ agencies that can share data across the network</div>
+      </div>
+    </div>
+
+    <h2>The Honest Bottom Line</h2>
+    <p>
+      We're not saying Safford PD or the Sheriff's Office abused these cameras. We're saying their own data feeds a national network that has been abused all across Arizona, that their audit is the only thing that would catch it if it happened here, and that the public has a legal right to see that audit. So let's see it.
+    </p>
+
+    <div class="cta-banner">
+      <h3>Request the Graham County Audit</h3>
+      <p>Arizona public records law gives you the right. We wrote the request.</p>
+      <a href={`${base}records/`} class="btn">Get the Records Request</a>
+    </div>
+  </div>
+</Layout>

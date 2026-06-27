@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="What Flock Really Is">
+  <div class="content">
+    <span class="card-tag" style="background: rgba(230, 57, 70, 0.2); color: #E63946;">Learn &middot; 01</span>
+    <h1>It's Not Just a Plate Reader</h1>
+    <p class="subtitle" style="color: var(--color-muted); font-size: 1.15rem;">
+      Local officials describe Flock as a camera that reads license plates, "just letters and numbers, no personal information." That is not what the company sells.
+    </p>
+
+    <h2>Vehicle Fingerprint</h2>
+    <p>
+      Flock's own marketing names the feature: <strong>Vehicle Fingerprint</strong>. Its cameras use AI to build a profile of each vehicle that goes far past the plate, cataloguing the make, body type, color, damage, and distinguishing features of cars, trucks, buses, and even bicycles.
+    </p>
+    <p>
+      The profiles are granular enough to note aftermarket wheels, roof racks, and bumper stickers. The stated purpose is to track a specific vehicle <strong>even when the plate isn't visible</strong>. "Just letters and numbers" describes a product Flock doesn't actually sell.
+    </p>
+    <p class="source">
+      Sources: Flock Safety product pages (flocksafety.com); BGR, "Flock Cameras Are Tracking More Than License Plates" (June 2026); Berkeleyside, "What are Flock cameras" (Nov 2025).
+    </p>
+
+    <h2>Searching For People, Not Just Cars</h2>
+    <p>
+      Flock has added AI that lets law enforcement search camera footage with plain-language descriptions of people. The ACLU documents the system surfacing results for queries like a person in a <strong>"camo hat, forest green sweater."</strong>
+    </p>
+    <p>
+      The "we don't use facial recognition" defense misses the point. You don't need a face when the system can be searched for a hat, a beard, a tattoo, or what someone's shirt says. The cameras capture pedestrians and vehicle occupants, not only plates.
+    </p>
+    <p class="source">
+      Source: ACLU, "Flock's Aggressive Expansions Go Far Beyond Simple Driver Surveillance" (Aug 2025).
+    </p>
+
+    <h2>Flock Nova: The Dossier Layer</h2>
+    <p>
+      Flock's flagship platform, <strong>Nova</strong>, fuses camera data with other databases: jail records, dispatch logs, public records, and open-source intelligence. It builds a searchable file on a person, with no warrant required. The original version even pulled in data from breaches until reporting forced the company to drop that piece.
+    </p>
+    <p>
+      The Electronic Frontier Foundation described Nova as a <strong>"dystopian panopticon."</strong> It turns a roadside plate camera into the front end of a personal-intelligence system.
+    </p>
+    <p class="source">
+      Sources: EFF (2025); BGR (June 2026); Flock Safety Nova product materials.
+    </p>
+
+    <h2>The Ring Doorbell Partnership</h2>
+    <p>
+      In <strong>October 2025</strong>, Amazon's Ring partnered with Flock. Agencies on the Nova platform can now request footage from Ring doorbell cameras, of which there are an estimated <strong>10 million</strong> in American homes, through a single portal. This reversed Ring's 2024 decision to shut down its police-request portal after years of backlash.
+    </p>
+    <p>
+      The ACLU's response: it's not great to see one of America's biggest companies team up with a mass-surveillance company at this authoritarian moment in history.
+    </p>
+    <p class="source">
+      Sources: TechCrunch (Oct 2025); State of Surveillance (Dec 2025); ACLU.
+    </p>
+
+    <h2>Connects To Predictive Policing</h2>
+    <p>
+      Flock's network can integrate directly into predictive-policing platforms, <strong>including Palantir</strong>. That is the bridge from a local camera to the national targeting architecture. We trace that whole chain on the next page.
+    </p>
+
+    <div class="cta-banner">
+      <h3>Next: Where This Data Actually Goes</h3>
+      <p>The camera is real. The abuse is documented, and a lot of it happened right here in Arizona.</p>
+      <a href={`${base}network/`} class="btn">The Network &amp; The Abuse</a>
+    </div>
+  </div>
+</Layout>
