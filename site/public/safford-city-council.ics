@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeFlock Safford//Safford City Council//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:safford-city-council-deflock-safford@mnehmos.github.io
+DTSTAMP:20260627T000000Z
+DTSTART;TZID=America/Phoenix:20260713T180000
+DTEND;TZID=America/Phoenix:20260713T210000
+RRULE:FREQ=MONTHLY;BYDAY=2MO,4MO
+SUMMARY:Safford City Council Meeting
+LOCATION:Safford Library Program Room\, 808 S. 7th Ave.\, Safford\, AZ 85546
+DESCRIPTION:Regular meeting of the Safford City Council (holds the Safford PD Flock contract). HOLIDAY NOTE: if the 2nd or 4th Monday is a holiday\, the meeting moves to the following Tuesday\, and some months vary. ALWAYS confirm the exact date and time on the official agenda at cityofsafford.us before attending. Public comment ("Citizen Comments on Non-Agenda Items") is available. Watch live on the City of Safford YouTube channel.
+URL:https://www.cityofsafford.us/AgendaCenter
+END:VEVENT
+END:VCALENDAR

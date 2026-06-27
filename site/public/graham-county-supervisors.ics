@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DeFlock Safford//Graham County Board of Supervisors//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:graham-county-bos-deflock-safford@mnehmos.github.io
+DTSTAMP:20260627T000000Z
+DTSTART;TZID=America/Phoenix:20260706T090000
+DTEND;TZID=America/Phoenix:20260706T120000
+RRULE:FREQ=MONTHLY;BYDAY=1MO,3MO
+SUMMARY:Graham County Board of Supervisors Meeting
+LOCATION:Graham County General Services Building\, Assembly Room\, 921 W. Thatcher Blvd.\, Safford\, AZ 85546
+DESCRIPTION:Regular meeting of the Graham County Board of Supervisors (holds the Sheriff's Office Flock contract). HOLIDAY NOTE: if the 1st or 3rd Monday is a holiday\, the meeting moves to the following Tuesday. ALWAYS confirm the exact date and time on the official agenda at graham.az.gov before attending. Public comment is available. Questions: 928-428-3250.
+URL:https://www.graham.az.gov/208/Meetings-and-Agendas
+END:VEVENT
+END:VCALENDAR
